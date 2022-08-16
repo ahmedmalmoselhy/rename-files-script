@@ -1,2 +1,2 @@
-# rename-files-script
-Python script for bulk renaming
+# Anubixo's Bulk Renamer
+Python script for bulk renaming files
