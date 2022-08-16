@@ -27,7 +27,7 @@ def incremental_with_extra(src, des, extra, key):
     :param des: Path
     """
     i = 1
-    print(":: Incrementally Renaming Files ::")
+    print(":: Incrementally Renaming Files With Prefix/Suffix ::")
     for filename in os.listdir(src):
         ext = os.path.splitext(filename)[1]
         if key == 1:
