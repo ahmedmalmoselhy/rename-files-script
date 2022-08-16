@@ -1,5 +1,6 @@
-from methods.incremental import incremental_rename
+from methods.incremental import incremental_rename, incremental_with_extra
 from methods.get_path import get_path
+from methods.get_prefix_suffix import get_text
 
 print(":: Welcome ::")
 print(":: Author: Anubixo ::")
@@ -9,7 +10,6 @@ src = get_path("Source Directory")
 # print(src)
 des = get_path("Destination Directory")
 # print(des)
-
 
 while True:
     print(":: Please select your operation or type exit to quit ::")
@@ -30,13 +30,19 @@ while True:
         res = incremental_rename(src, des)
         print(res)
     elif operation == "2":
-        print(operation)
+        word = get_text("prefix")
+        res = incremental_with_extra(src, des, word, 1)
+        print(res)
     elif operation == "3":
-        print(operation)
-    elif operation == "4":
-        print(operation)
-    elif operation == "5":
-        print(operation)
+        word = get_text("suffix")
+        res = incremental_with_extra(src, des, word, 0)
+        print(res)
+    # elif operation == "4":
+    #     word = get_text("prefix")
+    #     print(operation)
+    # elif operation == "5":
+    #     word = get_text("suffix")
+    #     print(operation)
     elif operation == "6":
         src = get_path("Source Directory")
         des = get_path("Destination Directory")
