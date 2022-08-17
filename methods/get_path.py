@@ -10,4 +10,4 @@ def get_path(path_name):
         return path
     else:
         print(":: Path Invalid, Try Again or Type exit to close script")
-        get_path(path_name)
+        return get_path(path_name)
